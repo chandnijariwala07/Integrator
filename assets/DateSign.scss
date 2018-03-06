@@ -1,0 +1,54 @@
+.date-sign {
+  width: 42px;
+  height: 48px;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  &.today {
+    .time {
+      height: 30px;
+      color: #333;
+      font-size: 18px;
+      text-align: center;
+      line-height: 30px;
+      font-weight: bold;
+      margin-top: -4px;
+      margin-bottom: 4px;
+      span { display: inline-block; }
+      .min {
+        font-size: 50%;
+        line-height: 30px;
+        vertical-align: super;
+        text-decoration: underline;
+      }
+    }
+    .caption {
+      text-align: center;
+      background-color: red;
+      color: white;
+      font-weight: bold;
+      font-weight: bold;
+      font-size: 10px;
+      line-height: 16px;
+    }
+  }
+  &.soon {
+    .day {
+      text-align: center;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 30px;
+      color: #333;
+      height: 30px;
+    }
+    .mon {
+      text-align: center;
+      background-color: darkgreen;
+      color: white;
+      font-weight: bold;
+      font-size: 10px;
+      line-height: 16px;
+    }
+  }
+}
+

@@ -1,0 +1,13 @@
+.integrator-plan {
+  .empty-list {
+    line-height: 60px;
+    vertical-align: middle;
+    text-align: center;
+  }
+  .panel-heading small.pull-right {
+    padding-right: 20px;
+    i { display: inline-block; width: 16px; text-align: center; }
+    &.missed { color: red; }
+    &.fulfilled { color: green; }
+  }
+}

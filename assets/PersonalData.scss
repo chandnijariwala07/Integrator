@@ -1,0 +1,28 @@
+.integrator-personal-data {
+  .form-group {
+    > label { width: 160px; float: left; margin: 0; line-height: 34px; }
+    > span { display: none; }
+    > div { margin-left: 160px; }
+  }
+  .checkbox {
+    margin: 0 0 15px 0;
+    line-height: 34px;
+    display: inline-block;
+    input { margin-top: 11px!important; }
+  }
+  .status-light {
+    .circle {
+      width: 20px;
+      height: 20px;
+      margin: auto;
+      display: block;
+      border-radius: 10px;
+      border: 1px solid black;
+      &.red { background: red; }
+      &.yellow { background: yellow; }
+      &.green { background: green; }
+    }
+    label[type=button] { height: 20px; }
+  }
+
+}

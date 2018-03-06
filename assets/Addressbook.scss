@@ -1,0 +1,50 @@
+.addressbook {
+  .sharing {
+    label.btn {
+      padding: 0;
+      i {
+        display: block;
+        font-size: 24px;
+        line-height: 32px;
+      }
+    }
+  }
+  .addressbook-list {
+    display: flex;
+    flex-flow: column nowrap;
+    > div { flex: 0 0 auto; }
+    > .existing-users {
+      max-height: 410px;
+      flex: 1 1 auto;
+      overflow: auto;
+      margin: 0;
+    }
+    .search-field {
+      position: relative;
+      margin-top: -15px;
+      margin-bottom: 15px;
+      i {
+        line-height: 34px;
+        &.clear {
+          display: none;
+          cursor: pointer;
+          pointer-events: initial;
+        }
+      }
+      input:focus ~ i.glass,
+      input.value ~ i.glass { display: none; }
+      input.value ~ i.clear { display: block; }
+    }
+    .list-group i { width: 20px; }
+  }
+  .addressbook-details {
+    .buttons {
+      i { width: 16px; }
+      .label { font-size: .9em; line-height: 34px; }
+    }
+  }
+  .modal-footer .label {
+    margin: 0 30px;
+    font-size: .9em
+  }
+}

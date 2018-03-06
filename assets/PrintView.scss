@@ -1,0 +1,33 @@
+@media print {
+  @page { margin: 2cm; }
+  body > * { display: none; }
+  body > .print-view {
+    display: block;
+    h2 { padding-bottom: 1cm; }
+    ul {
+      display: block;
+      list-style-type: disc;
+      > li { padding-left: 1cm; }
+    }
+    .target {
+      page-break-inside: avoid;
+      padding-bottom: 1cm;
+      h4 { border-bottom: 0.5pt solid black; }
+      .details { white-space: pre-line; }
+    }
+    .signatures {
+      display: flex;
+      justify-content: space-around;
+      padding-top: 2cm;
+      > div {
+        width: 5cm;
+        border-top: 1pt solid black;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media screen {
+  .print-view { display: none; }
+}

@@ -1,0 +1,178 @@
+@import 'variables';
+.integrator {
+  .integrator-clients {
+    .filter-options {
+      .language-levels {
+        > div {
+          display: flex;
+          justify-content: space-between;
+        }
+        button.btn-option {
+          border: none;
+          margin: 0 1px;
+          width: 22px;
+          font-size: 12px;
+          line-height: 24px;
+          vertical-align: middle;
+          &.active { background: $theme-color; color: white; }
+        }
+      }
+    }
+    .client-row-header {
+      margin-bottom: 0;
+      .panel-body {
+        padding: 5px 15px;
+        .client-row { height: 42px; }
+        .client-row > div {
+          flex-direction: column;
+          align-items: stretch;
+          font-size: 12px;
+          line-height: 16px;
+          .sort {
+            border: none;
+            outline: none;
+            text-align: inherit;
+            background: transparent;
+            .indicator {
+              margin: 2px 5px 2px 0;
+              float: left;
+              > div { border: 5px solid transparent; }
+              .asc { border-bottom-color: #ccc; border-top-width: 0; margin-bottom: 2px; }
+              .desc { border-top-color: #ccc; border-bottom-width: 0; }
+              &.asc > .asc { border-bottom-color: #333; }
+              &.desc > .desc { border-top-color: #333; }
+            }
+            .caption {
+              font-size: 12px;
+              line-height: 16px;
+            }
+          }
+          &.cell-appointment { width: 90px; }
+          &.cell-traffic-light { width: 0; }
+
+        }
+      }
+    }
+    .create-button {
+      height: 82px;
+      padding: 10px 15px;
+      display: flex;
+      align-items: center;
+    }
+    .profile.own-client:before {
+      content: '\f005';
+      position: absolute;
+      padding: 2px;
+      top: 0;
+      left: 0;
+      font-size: 24px;
+      font-family: fontawesome;
+    }
+  }
+    div.alert.big-sign {
+    display: flex;
+    align-items: center;
+    > i {
+      flex: 0 0 auto;
+      font-size: 48px;
+      margin: 6px 15px 6px 0;
+    }
+    > div {
+      flex: 1 1 100%;
+      line-height: 20px;
+    }
+  }
+  .integrator-client {
+    .btn em {
+      display: block;
+    }
+  }
+}
+
+.create-client-form {
+  .form-group {
+    >label {
+      width: 160px;
+      float: left;
+      margin: 0;
+      line-height: 34px;
+    }
+    >span {
+      display: none;
+    }
+    >div {
+      margin-left: 160px;
+    }
+  }
+}
+
+.integrator-dashboard-view {
+  .cockpit-calendar {
+    display: flex;
+    max-height: 354px;
+    flex-direction: column;
+    h4 { flex: 0 0 auto; }
+    .list {
+      flex: 1 1 auto;
+      overflow-y: auto;
+      .date-sign { float: left; }
+      .details {
+        padding: 4px 0 4px 50px;
+        h5 {
+          margin: 0;
+          line-height: 20px;
+        }
+      }
+    }
+    .buttons {
+      flex: 0 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      .appointment-modal-container,
+      .task-modal-container {
+        height: 54px;
+        flex: 0 0 50%;
+        text-align: center;
+        > button { width: 140px; }
+        > div { text-align: left; }
+      }
+    }
+  }
+}
+
+.integrator-notes,
+.integrator-minutes {
+  .panel-heading a {
+    font-weight: normal!important;
+  }
+  table.table {
+    margin-bottom: 5px;
+    tr.create-note > td {
+      line-height: 34px;
+      .form-group {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .btn {
+    margin-right: 10px;
+  }
+}
+.state-icon {
+  font-size: 28px;
+  height: 32px;
+  width: 32px;
+  margin: -6px 2px -6px 0;
+  float: left;
+  > i {
+    display: block;
+    line-height: 32px;
+    font-size: 1.6rem;
+    animation: 2s ease-in-out infinite pulse;
+  }
+}
+
+.vita-info {
+  text-align: left;
+}

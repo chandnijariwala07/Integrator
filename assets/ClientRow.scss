@@ -1,0 +1,168 @@
+@import 'variables';
+
+.integrator-clients {
+  .client-row {
+    display: flex;
+    height: 60px;
+    > div {
+      display: flex;
+      justify-content: center;
+    }
+    .cell-photo {
+      width: 60px;
+      align-items: center;
+      > img {
+        border-radius: 24px;
+        max-width: 48px;
+        max-height: 48px;
+        background: white;
+        box-shadow: 0 0 1px 2px white;
+      }
+    }
+    .cell-personal {
+      flex-grow: 1;
+      flex-direction: column;
+      .name { font-size: 18px; font-weight: bold; line-height: 20px; height: 40px; }
+      .address { font-size: 14px; line-height: 20px; }
+    }
+    .cell-checks {
+      width: 60px;
+      flex-direction: column;
+      > i {
+        width: 16px;
+        display: inline-block;
+      }
+    }
+    .cell-traffic-light {
+      $w: 16px;
+      $h: 48px;
+      $r:  4px;
+      width: 30px;
+      align-items: center;
+      .meter {
+        width: $w;
+        height: $h;
+        position: relative;
+        border-radius: $r;
+        background: #666;
+        box-shadow: 0 0 1px 1px white;
+        > * {
+          top: 0;
+          width: 100%;
+          height: $h / 3;
+          position: absolute;
+          border-radius: $r;
+          &.high { background: red; }
+          &.mid { background: yellow; top: 1 * $h / 3; }
+          &.low { background: green; top: 2 * $h / 3; }
+        }
+        > svg {
+          width: 100%;
+          height: 100%;
+          path { fill: #111; }
+        }
+      }
+    }
+    .cell-completeness {
+      width: 100px;
+      align-items: center;
+      > .btn {
+        padding: 0;
+        width: 100%;
+        display: flex;
+        color: inherit;
+        white-space: normal;
+        flex-direction: column;
+        justify-content: center;
+        > .graph {
+          height: 34px;
+          display: flex;
+          border-bottom: 1px solid white;
+          justify-content: space-around;
+          > .meter {
+            width: 10px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            background: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 0 1px 1px white;
+            > div {
+              background: #fff;
+              width: 100%;
+            }
+            &.proposed > div { background: #eee; }
+            &.working > div { background: #eee; }
+            &.success > div { background: darkgreen; }
+            &.failed > div { background: red; }
+          }
+        }
+        &:hover > .graph {
+          border-color: #95b9d4;
+          > .meter {
+            box-shadow: 0 0 1px 1px #95b9d4;
+            background: fade-out($color: #95b9d4, $amount: 0.7);
+
+         }
+        }
+        > .caption {
+          line-height: 16px;
+          font-size: 0.8em;
+          font-weight: normal;
+          text-align: center;
+        }
+      }
+    }
+    .cell-invite {
+      width: 100px;
+      align-items: center;
+      .btn {
+        width: 100px;
+        white-space: normal;
+      }
+      .invited {
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+        small {
+          font-size: 11px;
+          display: block;
+        }
+      }
+    }
+    .cell-language {
+      width: 40px;
+      font-weight: bold;
+      align-items: center;
+      text-align: center;
+    }
+    .cell-appointment {
+      width: 60px;
+      padding: 5px 8px;
+      text-align: center;
+      .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        width: 50px;
+        height: 50px;
+        color: inherit;
+        &:hover {
+          color: #95b9d4;
+        }
+      }
+      .date-sign {
+        background: white;
+        border: 1px solid black;
+        box-shadow: 0 0 0 1px white;
+      }
+    }
+    .cell-alert {
+      width: 60px;
+      padding: 4px;
+      text-align: center;
+    }
+  }
+}

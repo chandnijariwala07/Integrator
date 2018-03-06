@@ -1,0 +1,46 @@
+.integrator-client .integrator-calendar {
+  .appointments, .tasks {
+    .date-sign {
+      float: left;
+      margin-top: 3px;
+      &.overdue:before {
+        content: '\F071';
+        color: red;
+        font-family: fontawesome;
+        font-size: 32px;
+        line-height: 52px;
+        text-align: center;
+      }
+
+    }
+    .details {
+      padding-left: 60px;
+      &.done h5 { text-decoration: line-through; }
+      .created { float: left; }
+      .done, .overdue, .due { padding-left: 50%; }
+      .overdue { color: red; }
+      i {
+        display: inline-block;
+        text-align: center;
+        width: 20px;
+      }
+    }
+  }
+}
+.modal {
+  .modal-body {
+    .datetime-picker {
+      display: flex;
+      .date {
+        flex-grow: 1;
+      }
+      .time {
+        width: 100px;
+        margin-left: 20px;
+        input {
+          text-align: right;
+        }
+      }
+    }
+  }
+}
